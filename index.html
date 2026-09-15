@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farming Bonus Hours: Aria Chiptune Contest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="arcade-room" id="room-bg">
+    <div class="arcade-cabinet">
+      <div class="cabinet-marquee">
+        <h1 class="marquee-text">ARIA RUSH</h1>
+      </div>
+      <div class="screen-housing">
+        <div class="crt-bezel">
+          <div class="game-display">
+            <div class="scanlines"></div>
+
+            <div class="glass-glare"></div>
+
+            <video id="chase-video" src="chase-video-and-song.mp4" playsinline></video>
+
+            <div class="game-hud" id="hud-overlay">
+              <div class="hud-top-bar">
+
+                <div class="status-alert blink" id="status-msg">INSERT COIN TO INITIALIZE</div>
+                <div class="now-playing-tag" id="now-playing-msg">NOW PLAYING: --</div>
+              </div>
+
+              <div class="hud-stats">
+                <div class="stat-box">SPEED: <span id="speed-val">000</span> MPH</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-chassis">
+        <div class="joystick-deck">
+          <div class="physical-joystick" id="joystick-trigger" role="button" aria-label="Pause or Resume Video">
+            <div class="joystick-ball"></div>
+          </div>
+
+          <div class="action-buttons">
+            <div class="arcade-push-btn cyan-btn"></div>
+            <div class="arcade-push-btn cyan-btn"></div>
+          </div>
+        </div>
+
+        <div class="coin-door">
+          <div class="coin-slot-frame">
+
+            <div class="insert-text">INSERT COIN</div>
+            <button id="coin-trigger" class="physical-coin-slot" aria-label="Insert Coin">
+
+              <div class="orange-glow-bulb"></div>
+            </button>
+            <div class="coin-return"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
